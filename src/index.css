@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .mobile-container {
+    @apply max-w-sm mx-auto bg-white min-h-screen;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-4 border border-gray-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors;
+  }
+  
+  .btn-success {
+    @apply bg-success-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-success-600 transition-colors;
+  }
+  
+  .btn-warning {
+    @apply bg-warning-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-warning-600 transition-colors;
+  }
+}
+
+.map-container {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-marker {
+  width: 24px;
+  height: 24px;
+  background: #3b82f6;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+}
+
+.route-line {
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 2px;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+.vehicle-icon {
+  width: 32px;
+  height: 32px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  animation: bounce 2s infinite;
+}
