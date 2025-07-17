@@ -1,5 +1,5 @@
 import React from 'react';
-import { Car, Users, Navigation, DollarSign, TrendingUp, Clock } from 'lucide-react';
+import { Car, Users, Navigation, DollarSign } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 const DashboardHome: React.FC = () => {
